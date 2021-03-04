@@ -65,6 +65,7 @@ function handleModeClick() {
     // 현재는 필 모드
     filling = true;
     modeBtn.innerText = "Paint"
+    console.log('hoge')
   }
 }
 

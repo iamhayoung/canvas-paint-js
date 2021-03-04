@@ -19,6 +19,7 @@ body {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  cursor: url(../img/paint-brush.png) 0 24, auto;
 }
 
 .controls {
@@ -64,4 +65,8 @@ body {
   border-radius: 50%;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.fillCursor {
+  cursor: url(../img/bucket.png), auto;
 }

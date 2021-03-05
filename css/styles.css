@@ -1,5 +1,6 @@
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -53,8 +54,11 @@ body {
   margin-bottom: 30px;
 }
 
+.range:hover {
+  cursor: ew-resize;
+}
+
 .controls .controls__btns {
-  width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -62,17 +66,27 @@ body {
 }
 
 .controls__btns button {
-  width: 80px;
-  padding: 5px 0;
-  background-color: #fff;
-  font-size: 12px;
+  width: 120px;
+  margin-right: 30px;
+  padding: 10px 15px;
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
   font-weight: 600;
   color: #333;
   text-align: center;
   text-transform: uppercase;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: 0.3s;
+}
+
+.controls__btns button:last-child {
+  margin-right: 0;
+}
+
+.controls__btns button:hover {
+  background: #dadada;
 }
 
 .controls__btns button:active {

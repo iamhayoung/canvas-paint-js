@@ -5,6 +5,8 @@ const range = document.getElementById("jsRange");
 const modeBtn = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
 const resetBtn = document.getElementById("jsReset");
+const pickerContainer = document.getElementById("jsPickerContainer");
+const picker = document.getElementById("jsColorPicker");
 
 const INITIAL_COLOR = "#35393c";
 const CANVAS_SIZE = 700;
@@ -93,6 +95,18 @@ function handleResetClick() {
   ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 }
 
+function previewColor(e) {
+  const pickedColor = e.target.value;
+  pickerContainer.style.background = pickedColor;
+  return pickedColor;
+}
+
+function pickColor(e) {
+  const pickedColor = previewColor(e);
+  ctx.strokeStyle = pickedColor;
+  ctx.fillStyle = pickedColor;
+}
+
 if (canvas) {
   canvas.addEventListener("mousemove", onMouseMove);
   canvas.addEventListener("mousedown", startPainting);
@@ -119,4 +133,15 @@ if (saveBtn) {
 
 if (resetBtn) {
   resetBtn.addEventListener("click", handleResetClick);
+}
+
+if (pickerContainer) {
+  pickerContainer.addEventListener("click", () => {
+    picker.click();
+  })
+}
+
+if (picker) {
+  picker.addEventListener("input", previewColor);
+  picker.addEventListener("change", pickColor);
 }

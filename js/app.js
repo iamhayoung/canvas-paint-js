@@ -4,6 +4,7 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const modeBtn = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
+const resetBtn = document.getElementById("jsReset");
 
 const INITIAL_COLOR = "#35393c";
 const CANVAS_SIZE = 700;
@@ -65,7 +66,6 @@ function handleModeClick() {
     // 현재는 필 모드
     filling = true;
     modeBtn.innerText = "Paint"
-    console.log('hoge')
   }
 }
 
@@ -86,6 +86,11 @@ function handleSaveClick() {
   link.href = image;
   link.download = "PaintJS[EXPORT]"; // 다운로드 디폴트 파일명
   link.click();
+}
+
+function handleResetClick() {
+  ctx.fillStyle = "#fff";
+  ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 }
 
 if (canvas) {
@@ -110,4 +115,8 @@ if (modeBtn) {
 
 if (saveBtn) {
   saveBtn.addEventListener("click", handleSaveClick);
+}
+
+if (resetBtn) {
+  resetBtn.addEventListener("click", handleResetClick);
 }

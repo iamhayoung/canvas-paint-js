@@ -52,6 +52,14 @@ function handleColorClick(event) {
   const color = event.target.style.backgroundColor;
   ctx.strokeStyle = color;
   ctx.fillStyle = color;
+
+  Array.from(colors).forEach((palette) => {
+    palette.classList.remove("selected")
+  })
+
+  const selectedColor = event.target;
+  console.log(selectedColor)
+	selectedColor.classList.add("selected");
 }
 
 function handleRangeChange(event) {
@@ -64,10 +72,12 @@ function handleModeClick() {
     // 현재는 선 그리기 모드
     filling = false;
     modeBtn.innerText = "Fill"
+    console.log("paint")
   } else {
     // 현재는 필 모드
     filling = true;
     modeBtn.innerText = "Paint"
+    console.log("fill")
   }
 }
 

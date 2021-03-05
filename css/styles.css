@@ -1,4 +1,5 @@
 @import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
 body {
   background-color: #f6f9fc;
@@ -7,15 +8,26 @@ body {
 }
 
 .container {
+  background: url(https://images.unsplash.com/photo-1504253163759-c23fccaebb55?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
+    no-repeat center center fixed;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0;
+  padding: 80px 0;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-family: "Fredoka One", cursive;
+  font-size: 33px;
+  color: #333;
 }
 
 .canvas {
   width: 700px;
   height: 700px;
+  margin-bottom: 50px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
@@ -23,7 +35,6 @@ body {
 }
 
 .controls {
-  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +59,7 @@ body {
 }
 
 .controls__btns button:active {
-  transform: scale(0.98);
+  transform: scale(0.9);
 }
 
 .controls .controls__range {

@@ -59,7 +59,8 @@ function handleColorClick(event) {
 
   const selectedColor = event.target;
   console.log(selectedColor)
-	selectedColor.classList.add("selected");
+  selectedColor.classList.add("selected");
+
 }
 
 function handleRangeChange(event) {

@@ -13,13 +13,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0;
+  padding: 5vw;
 }
 
 .title {
   margin-bottom: 30px;
   font-family: "Fredoka One", cursive;
   font-size: 33px;
+  text-align: center;
   color: #333;
 }
 
@@ -34,10 +35,10 @@ body {
 }
 
 .controls {
+  width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 700px;
 }
 
 .controls .controls__range {

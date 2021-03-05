@@ -37,9 +37,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 700px;
+}
+
+.controls .controls__range {
+  margin-bottom: 30px;
 }
 
 .controls .controls__btns {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   margin-bottom: 30px;
 }
 
@@ -61,12 +70,11 @@ body {
   transform: scale(0.9);
 }
 
-.controls .controls__range {
-  margin-bottom: 30px;
-}
-
 .controls .controls__palette {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .controls__palette .controls__palette__color,
@@ -74,30 +82,60 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  cursor: pointer;
+  border: 3px solid transparent;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.jsColor {
+  margin-right: 10px;
+}
+
+.jsColor:last-child {
+  margin-right: 0;
 }
 
 .controls__palette__color-picker {
-  background: conic-gradient(
-    #d6ed04,
-    #d3e90a,
-    #9ed110,
-    #50b517,
-    #179067,
-    #386ac7,
-    #476eaf,
-    #9f49ac,
-    #cc42a2,
-    #ff3ba7,
-    #ff5800,
-    #ff8100,
-    #feac00,
-    #ffd000,
-    #ffe600,
-    #ffef0e
-  );
   position: relative;
+  background: conic-gradient(
+        #d6ed04,
+        #d3e90a,
+        #9ed110,
+        #50b517,
+        #179067,
+        #386ac7,
+        #476eaf,
+        #9f49ac,
+        #cc42a2,
+        #ff3ba7,
+        #ff5800,
+        #ff8100,
+        #feac00,
+        #ffd000,
+        #ffe600,
+        #ffef0e
+      )
+      padding-box,
+    conic-gradient(
+        #d6ed04,
+        #d3e90a,
+        #9ed110,
+        #50b517,
+        #179067,
+        #386ac7,
+        #476eaf,
+        #9f49ac,
+        #cc42a2,
+        #ff3ba7,
+        #ff5800,
+        #ff8100,
+        #feac00,
+        #ffd000,
+        #ffe600,
+        #ffef0e
+      )
+      border-box;
 }
 
 .controls__palette__color-picker__picker {
@@ -113,4 +151,12 @@ body {
 
 .fillCursor {
   cursor: url(../img/bucket.png), auto;
+}
+
+.jsColor.selected {
+  border: 3px solid #fff;
+}
+
+.jsColor:nth-child(2).selected {
+  border: 3px solid #35393c;
 }

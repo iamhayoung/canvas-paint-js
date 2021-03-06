@@ -98,7 +98,7 @@ function handleSaveClick() {
   const image = canvas.toDataURL("image/png", 0.7);
   const link = document.createElement("a");
   link.href = image;
-  link.download = "PaintJS[EXPORT]"; // 다운로드 디폴트 파일명
+  link.download = "[EXPORT]your_artwork"; // 다운로드 디폴트 파일명
   link.click();
 }
 

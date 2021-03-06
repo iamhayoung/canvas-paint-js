@@ -28,7 +28,7 @@ function stopPainting() {
   painting = false;
 }
 
-function startPainting(event) {
+function startPainting() {
   if (filling === false) {
     painting = true;
   }
@@ -58,7 +58,6 @@ function handleColorClick(event) {
   })
 
   const selectedColor = event.target;
-  console.log(selectedColor)
   selectedColor.classList.add("selected");
 
 }
@@ -73,12 +72,12 @@ function handleModeClick() {
     // 현재는 선 그리기 모드
     filling = false;
     modeBtn.innerText = "Fill"
-    console.log("paint")
+    canvas.classList.remove("fillCursor");
   } else {
     // 현재는 필 모드
     filling = true;
     modeBtn.innerText = "Paint"
-    console.log("fill")
+    canvas.classList.add("fillCursor");
   }
 }
 

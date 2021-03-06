@@ -149,6 +149,7 @@ if (resetBtn) {
 
 if (pickerContainer) {
   pickerContainer.addEventListener("click", () => {
+    pickerContainer.click();
     picker.click();
   })
 }

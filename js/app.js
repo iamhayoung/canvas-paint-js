@@ -73,11 +73,13 @@ function handleModeClick() {
     filling = false;
     modeBtn.innerText = "Fill"
     canvas.classList.remove("fillCursor");
+    modeBtn.classList.remove("paint-mode");
   } else {
     // 현재는 필 모드
     filling = true;
     modeBtn.innerText = "Paint"
     canvas.classList.add("fillCursor");
+    modeBtn.classList.add("paint-mode");
   }
 }
 

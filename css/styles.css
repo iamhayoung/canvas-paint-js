@@ -28,9 +28,7 @@ body {
 .main {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 0 0 30px 0;
+  justify-content: center;
 }
 
 .canvas {
@@ -43,19 +41,15 @@ body {
   cursor: url(../img/paint-brush.png) 0 24, auto;
 }
 
+.fillCursor {
+  cursor: url(../img/bucket.png), auto;
+}
+
 .controls {
-  width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.range {
-  margin-bottom: 17px;
-}
-
-.range:hover {
-  cursor: ew-resize;
+  margin-left: 60px;
 }
 
 .btns {
@@ -67,7 +61,7 @@ body {
 
 .btns button {
   width: 120px;
-  margin-right: 30px;
+  margin-right: 20px;
   padding: 10px 15px;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -115,10 +109,9 @@ body {
 }
 
 .palette {
-  width: 700px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: 25px;
   margin-bottom: 30px;
 }
 
@@ -131,14 +124,6 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.jsColor {
-  margin-right: 10px;
-}
-
-.jsColor:last-child {
-  margin-right: 0;
 }
 
 .jsColor.selected {
@@ -202,6 +187,10 @@ body {
   outline: none;
 }
 
-.fillCursor {
-  cursor: url(../img/bucket.png), auto;
+.range {
+  margin-bottom: 17px;
+}
+
+.range:hover {
+  cursor: ew-resize;
 }

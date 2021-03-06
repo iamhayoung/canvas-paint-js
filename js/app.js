@@ -71,13 +71,13 @@ function handleModeClick() {
   if (filling === true) {
     // 현재는 선 그리기 모드
     filling = false;
-    modeBtn.innerText = "Fill"
+    modeBtn.innerHTML = '<i class="fas fa-fill-drip"></i>Fill'
     canvas.classList.remove("fillCursor");
     modeBtn.classList.remove("paint-mode");
   } else {
     // 현재는 필 모드
     filling = true;
-    modeBtn.innerText = "Paint"
+    modeBtn.innerHTML = '<i class="fas fa-paint-brush"></i>Paint'
     canvas.classList.add("fillCursor");
     modeBtn.classList.add("paint-mode");
   }

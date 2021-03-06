@@ -103,15 +103,36 @@ body {
   color: #141301;
 }
 
+.btns .mode-btn:hover {
+  border: 3px solid #62929e;
+  background: #62929e;
+}
+
+.btns .mode-btn.paint-mode:hover {
+  border: 3px solid #141301;
+  background: #141301;
+  color: #fff;
+}
+
 .btns .save-btn {
   border: 3px solid #5cb85c;
   background: #5cb85c;
   color: #fff;
 }
 
+.btns .save-btn:hover {
+  border: 3px solid #20d666;
+  background: #20d666;
+}
+
 .btns .reset-btn {
   border: 3px solid #fff;
   color: #fff;
+}
+
+.btns .reset-btn:hover {
+  background: #fff;
+  color: #333;
 }
 
 .palette {

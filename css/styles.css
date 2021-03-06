@@ -50,22 +50,22 @@ body {
   align-items: center;
 }
 
-.controls .controls__range {
-  margin-bottom: 30px;
+.range {
+  margin-bottom: 17px;
 }
 
 .range:hover {
   cursor: ew-resize;
 }
 
-.controls .controls__btns {
+.btns {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 30px;
 }
 
-.controls__btns button {
+.btns button {
   width: 120px;
   margin-right: 30px;
   padding: 10px 15px;
@@ -79,50 +79,51 @@ body {
   transition: 0.3s;
 }
 
-.controls__btns button i {
+.btns button i {
   margin-right: 5px;
 }
 
-.controls__btns button:last-child {
+.btns button:last-child {
   margin-right: 0;
 }
 
-.controls__btns button:active {
+.btns button:active {
   transform: scale(0.9);
 }
 
-.mode-btn {
+.btns .mode-btn {
   border: 3px solid transparent;
   background: #141301;
   color: #fff;
 }
 
-.mode-btn.paint-mode {
+.btns .mode-btn.paint-mode {
   border: 3px solid #141301;
   background: transparent;
   color: #141301;
 }
 
-.save-btn {
+.btns .save-btn {
   border: 3px solid #5cb85c;
   background: #5cb85c;
   color: #fff;
 }
 
-.reset-btn {
+.btns .reset-btn {
   border: 3px solid #fff;
   color: #fff;
 }
 
-.controls .controls__palette {
-  width: 100%;
+.palette {
+  width: 700px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  margin-bottom: 30px;
 }
 
-.controls__palette .controls__palette__color,
-.controls__palette__color-picker {
+.palette .palette__color,
+.palette__color-picker {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -148,7 +149,7 @@ body {
   border: 5px solid #35393c;
 }
 
-.controls__palette__color-picker {
+.palette__color-picker {
   position: relative;
   background: conic-gradient(
         #d6ed04,
@@ -190,7 +191,7 @@ body {
       border-box;
 }
 
-.controls__palette__color-picker__picker {
+.palette__color-picker__picker {
   position: absolute;
   left: 15%;
   top: 15%;

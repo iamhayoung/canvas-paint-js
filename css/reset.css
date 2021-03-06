@@ -139,3 +139,16 @@ button {
   appearance: none;
   cursor: pointer;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:active {
+  color: inherit;
+}
+
+a:focus {
+  outline: none;
+}

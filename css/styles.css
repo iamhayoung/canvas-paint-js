@@ -221,3 +221,22 @@ body {
 .range:hover {
   cursor: ew-resize;
 }
+
+.github-logo {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.github-logo i {
+  font-size: 32px;
+  transition: 0.3s;
+}
+
+.github-logo:hover i {
+  color: #fff;
+}
+
+.github-logo:active {
+  transform: scale(0.9);
+}

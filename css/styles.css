@@ -8,6 +8,11 @@ body {
 }
 
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 30px;
   min-height: 100vh;
   background: url("https://images.unsplash.com/photo-1504253163759-c23fccaebb55?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
     no-repeat center center fixed;
@@ -15,6 +20,7 @@ body {
 }
 
 .header {
+  width: 100%;
   padding: 30px;
 }
 
@@ -26,6 +32,7 @@ body {
 }
 
 .main {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +41,6 @@ body {
 .canvas {
   width: 700px;
   height: 700px;
-  margin-bottom: 30px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
